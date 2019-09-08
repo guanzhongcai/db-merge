@@ -1,0 +1,28 @@
+{
+  "readme": "source是需要被合区的源库列表，object是合区后的目标库",
+  "source": [
+    {
+      "name": "db12",
+      "host" : "127.0.0.1",
+      "port" : 6379,
+      "db" : 12,
+      "auth_pass": "gotech123",
+      "poolsize": 20
+    },
+    {
+      "name": "db13-gzc",
+      "host" : "127.0.0.1",
+      "port" : 6379,
+      "db" : 13,
+      "auth_pass": "gotech123",
+      "poolsize": 20
+    }
+  ],
+  "object": {
+    "host" : "127.0.0.1",
+    "port" : 6379,
+    "db" : 5,
+    "auth_pass": "gotech123",
+    "poolsize": 20
+  }
+}
