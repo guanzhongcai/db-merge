@@ -1,0 +1,18 @@
+{
+  "name": "merge-redis",
+  "version": "1.0.0",
+  "description": "sanguo2",
+  "main": "mergeRedis.js",
+  "dependencies": {
+    "async": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node mergeRedis.js"
+  },
+  "keywords": [
+    "merge"
+  ],
+  "author": "gzc",
+  "license": "ISC"
+}

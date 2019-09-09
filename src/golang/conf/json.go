@@ -22,7 +22,7 @@ var Conf struct {
 
 func init() {
 
-	data, err := ioutil.ReadFile("../config-dev.json")
+	data, err := ioutil.ReadFile("../../config-dev.json")
 	if err != nil {
 		log.Fatal("%v", err)
 	}

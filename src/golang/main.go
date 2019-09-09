@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "redisMerge/src/conf"
+	_ "golang/conf"
 	"time"
 )
 
