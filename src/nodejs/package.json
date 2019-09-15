@@ -1,10 +1,12 @@
 {
   "name": "merge-redis",
   "version": "1.0.0",
-  "description": "sanguo2",
+  "description": "合并多个redis db到一个db中",
   "main": "mergeRedis.js",
   "dependencies": {
-    "async": "^3.1.0"
+    "async": "^3.1.0",
+    "redis": "^2.8.0",
+    "generic-pool": "^2.4.2"
   },
   "devDependencies": {},
   "scripts": {

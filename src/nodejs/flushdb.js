@@ -3,7 +3,7 @@
  */
 
 const fs = require("fs");
-const RedisAccess = require("../../server/shared/redis/RedisAccess");
+const RedisAccess = require("./redis/RedisAccess");
 
 function flushDb() {
 

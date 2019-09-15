@@ -8,8 +8,6 @@ const RedisAccess = require("../../server/shared/redis/RedisAccess");
 
 let debugLog = 0; //debug开关
 
-const familyRanks = ["family_build", "family_hero", "family_invade"];
-
 class RedisMerge extends RedisAccess {
 
     constructor(redisConfig){
@@ -158,12 +156,6 @@ RedisMerge.prototype.saveZSet = function (key, cb) {
                         let args = [key];
                         for (let i = 0; i < memberScores.length; i++) {
                             let [member, score] = [memberScores[i], memberScores[++i]];
-                            if (familyRanks.includes(key)){
-                                member = Number(member);
-                                //TODO 以后任何平台都不做了
-                                // member += area * 10 * 10000;
-                                // console.log(`家族排行榜合并 area=${area}, member=${member}`);
-                            }
                             args.push(score, member);
                         }
                         //ZADD key score1 member1 [score2 member2]
