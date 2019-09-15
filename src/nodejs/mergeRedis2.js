@@ -5,7 +5,7 @@
 
 const fs = require("fs");
 const async = require("async");
-const RedisMerge = require("./RedisMerge");
+const RedisMerge = require("./redis/RedisMerge");
 
 let redisObj; //目标库连接
 let debugLog = 0; //debug开关
