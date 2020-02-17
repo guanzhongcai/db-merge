@@ -128,14 +128,8 @@ RedisMerge.prototype.saveHash = function (key, cb) {
  */
 RedisMerge.prototype.saveZSet = function (key, cb) {
 
-    if (key.indexOf("buildRank") !== -1) { //城池建设排行榜不迁移
-        cb(null);
-        return;
-    }
-
     let cursor = "0";
     const self = this;
-    const area = self.area;
     const redisObj = self.redisObj;
 
     self.exec("ZCARD", [key], function (err, oldCount) {
@@ -181,12 +175,6 @@ RedisMerge.prototype.saveZSet = function (key, cb) {
  * 保存集合
  */
 RedisMerge.prototype.saveSet = function (key, cb) {
-
-    if (key.substring(0, 6) === "redbag") {
-        // console.log("红包数据不迁移");
-        cb(null);
-        return;
-    }
 
     const self = this;
     const redisObj = self.redisObj;
@@ -249,7 +237,6 @@ RedisMerge.prototype.saveSet = function (key, cb) {
 RedisMerge.prototype.saveList = function (key, cb) {
 
     console.warn("暂不支持list类型迁移！！", key);
-    //singles_event是女武将活动的幸运数触发奖励log
     cb(null);
 };
 
